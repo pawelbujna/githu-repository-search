@@ -1,0 +1,23 @@
+query FetchRepositories($query: String = "stars:>100000", $first: Int = 10, $after: String) {
+    search(query: $query, type: REPOSITORY, first: $first, after: $after) {
+        edges {
+            node {
+                ... on Repository {
+                    id
+                    forkCount
+                    stargazerCount
+                    name
+                    url
+                    description
+                }
+            }
+        }
+        repositoryCount
+        pageInfo {
+            endCursor
+            hasNextPage
+            hasPreviousPage
+            startCursor
+        }
+    }
+}
