@@ -1,6 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderer from 'react-test-renderer';
 import { Provider } from 'urql';
 import { fromValue } from 'wonka';
 
@@ -43,12 +42,6 @@ describe('HomePage', () => {
         const header = await screen.findByText(firstListElementMock.name);
 
         expect(header).toBeInTheDocument();
-    });
-
-    it('matches the snapshot', async () => {
-        const testRenderer = await renderer.create(createComponent());
-
-        expect(testRenderer.toJSON()).toMatchSnapshot();
     });
 
     it('should display all elements correctly', async () => {

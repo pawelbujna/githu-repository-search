@@ -45,7 +45,6 @@
     "jest-environment-jsdom": "^29.3.1",
     "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
-    "react-test-renderer": "^18.2.0",
     "typescript": "^4.9.3",
     "wonka": "^6.1.1"
   }

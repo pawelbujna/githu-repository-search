@@ -31,6 +31,8 @@
 ## ?? Things i didn't understand or couldn't do:
 - `Do not mock API response in your repository` - I mocked the data for unit testing. Actual data comes from graphql.
 - `Dockerize it!` - I never did that so I didn't wanted to spent too much time on it.
+- `jest snapshots` - unfortunately needed to abandon this feature due to the `AntD v5`. It generates new css classes hence it never matches the snapshot after installing dependencies.
+
 
 ## Problems I faced that consumed some time
 - `@graphql-codegen/typescript-urql` -  that extension generates variables with the same name and next compiler couldn't build the application. Was looking for a solution, but couldn't find one. The outcome of this decision was to use urql's `useQuery` instead of named query hooks.
